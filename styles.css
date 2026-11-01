@@ -158,3 +158,6 @@ details p { max-width: 54rem; color: var(--black); padding-bottom: var(--s6); pa
     gap: var(--s7);
   }
 }
+.motion-toggle {
+  display: none;
+}
