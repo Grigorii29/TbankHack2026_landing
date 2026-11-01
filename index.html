@@ -1,68 +1,149 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1452A5">
-  <meta name="description" content="Хакатон Коллаб: ML и разработка для студентов. 28 ноября 2026, 9:30–20:00, IT-хаб Т-Банка в Нижнем Новгороде.">
-  <title>Хакатон Коллаб — 28 ноября 2026</title>
-  <link rel="icon" href="assets/collab-blue.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-</head>
-<body id="top">
-  <a class="skip" href="#main">К содержимому</a>
-  <header class="header wrap">
-    <a class="brand" href="#top" aria-label="Коллаб — на главную"><img src="assets/collab-blue.svg" width="474" height="111" alt="Коллаб"></a>
-    <nav aria-label="Основная навигация"><a href="#participants">Участники</a><a href="#schedule">Программа</a><a href="#faq">Вопросы</a><a href="#partners">Партнёры</a></nav>
-  </header>
-  <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <h1 id="hero-title">ХАКАТОН<span>КОЛЛАБ</span></h1>
-      <div class="hero-bottom"><p>ML + разработка.<br>Один день, чтобы создать продукт.</p><a class="button" href="#registration">Регистрация открыта <span aria-hidden="true">↗</span></a></div>
-      <dl class="event-info">
-        <div><dt>Дата</dt><dd><time datetime="2026-11-28">28.11.2026</time></dd></div>
-        <div><dt>Сбор</dt><dd><time datetime="2026-11-28T09:30:00+03:00">9:30</time></dd></div>
-        <div><dt>Место / Нижний Новгород</dt><dd>БЦ «Лобачевский Плаза»<span>IT-хаб Т-Банка / 3 этаж</span></dd></div>
-      </dl>
-    </section>
-    <div class="marquee" aria-label="Коллаб / Хакатон">
-      <div class="marquee-track" aria-hidden="true">
-        <div class="marquee-group"><span>КОЛЛАБ <b>»</b> ХАКАТОН <b>/</b></span><span>КОЛЛАБ <b>»</b> ХАКАТОН <b>/</b></span></div>
-        <div class="marquee-group"><span>КОЛЛАБ <b>»</b> ХАКАТОН <b>/</b></span><span>КОЛЛАБ <b>»</b> ХАКАТОН <b>/</b></span></div>
-      </div>
-      <button class="motion-toggle" type="button" aria-label="Приостановить бегущую строку" aria-pressed="false" hidden><span aria-hidden="true">Ⅱ</span></button>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#f4f4ef">
+    <meta name="description"
+          content="Хакатон Коллаб — 28 ноября 2026, IT-хаб Т-Банка. ML и разработка: персональные условия для клиентов банка.">
+    <title>Хакатон Коллаб — 28 ноября 2026</title>
+    <link rel="icon" type="image/svg+xml"
+          href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2210%22%20fill%3D%22%23114da5%22%2F%3E%3Cpath%20d%3D%22M19%2046%2043%2015%22%20stroke%3D%22%23fff%22%20stroke-width%3D%2211%22%20stroke-linecap%3D%22square%22%2F%3E%3Ccircle%20cx%3D%2247%22%20cy%3D%2246%22%20r%3D%226%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet"></head>
+<body class="skin-1"><a class="skip" href="#main">К содержимому</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="header">
+    <div class="header-inner"><a class="wordmark" href="#top" aria-label="Коллаб — наверх"><img src="assets/collab-blue.svg" width="474" height="111" alt="Коллаб"></a>
+        <nav id="primary-nav" aria-label="Навигация"><a href="#cases">Кейс</a><a href="#participants">Участники</a><a
+                href="#schedule">Расписание</a><a href="#registration">Регистрация</a><a href="#faq">FAQ</a><a
+                href="#partners">Партнёры</a></nav>
+        
+        <button type="button" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false"
+                aria-label="Открыть меню"><span></span><span></span></button>
     </div>
-    <section id="participants" class="section wrap" aria-labelledby="participants-title">
-      <h2 id="participants-title">Кто участвует</h2>
-      <div class="participants-grid">
-        <article><h3>Студенты бакалавриата</h3><p>1–4 курсов, очной и заочной форм обучения.</p></article>
-        <article><h3>10 команд</h3><p>По 5 человек. Можно прийти без команды — найти её поможет чат участников.</p></article>
-      </div>
+</header>
+<main id="main">
+    <section class="hero hero-editorial" id="top">
+        <div class="hero-editorial-grid">
+            <div class="editorial-message">
+                <h1>ХАКАТОН<br><span>КОЛЛАБ</span></h1>
+                <div class="hero-editorial-bottom"><a class="arrow-cta" href="#registration">РЕГИСТРАЦИЯ ОТКРЫТА
+                    <span><svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span></a></div>
+            </div>
+            <div class="editorial-art">
+                <div class="ed-stripe" aria-hidden="true"></div>
+                
+                <svg class="bowl-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 500" fill="none"
+                     aria-hidden="true">
+                    <g class="bowl-rings" stroke="currentColor" stroke-linecap="round" stroke-width="10">
+                        <path d="M108 296c-3-90 58-160 149-160s152 73 152 160"/>
+                        <path d="M135 295c0-72 47-130 122-130s124 61 124 130"/>
+                        <path d="M165 296c-3-56 30-102 91-102s96 51 96 102"/>
+                        <path d="M193 297c-1-40 20-75 65-75s65 37 65 75"/>
+                        <path d="M221 296c0-25 11-45 36-45s38 20 39 45"/>
+                        <path d="M130 295c-2-47 37-92 87-91"/>
+                        <path d="M304 252c44-36 102-20 109 44"/>
+                        <path d="M332 276c26-14 48-5 54 20"/>
+                    </g>
+                    <g class="bowl-sticks" stroke="currentColor" stroke-linecap="round" stroke-width="12">
+                        <path d="m337 171 104-133"/>
+                        <path d="m361 192 111-117"/>
+                    </g>
+                    <g class="bowl-steam" stroke="currentColor" stroke-linecap="round" stroke-width="6">
+                        <path d="M168 143c-23-22 23-38 8-68"/>
+                        <path d="M233 125c-24-22 21-39 5-68"/>
+                        <path d="M291 144c-22-22 20-41 5-69"/>
+                    </g>
+                    <path class="bowl-body" d="M65 295h390c0 104-84 162-195 162S65 399 65 295Z" stroke="currentColor"
+                          stroke-width="13" stroke-linejoin="round"/>
+                    <path d="M64 295h392" stroke="currentColor" stroke-linecap="round" stroke-width="15"/>
+                    <path d="M183 454v20h153v-20M197 474h125" stroke="currentColor" stroke-linecap="round"
+                          stroke-width="11"/>
+                    <circle cx="241" cy="411" r="6.5" fill="currentColor"/>
+                    <circle cx="278" cy="411" r="6.5" fill="currentColor"/>
+                    <path d="M248 429c8 7 18 7 25 0" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+                </svg>
+                </div>
+        </div>
+        <div class="hero-facts" aria-label="Дата и место"><div><span>Дата</span><strong>28.11.2026</strong></div><div><span>Сбор</span><strong>9:30</strong></div><div class="venue"><span>Место / Нижний Новгород</span><strong>БЦ «Лобачевский Плаза»</strong><small>IT-хаб Т-Банка / 3 этаж</small></div></div>
+        
     </section>
-    <section id="schedule" class="schedule" aria-labelledby="schedule-title">
-      <div class="section wrap schedule-grid">
-        <div><h2 id="schedule-title">Программа<br>дня</h2><p class="schedule-note">От первой идеи<br>до защиты продукта.</p></div>
-        <ol class="timeline">
-          <li><time datetime="09:30">9:30</time><h3>Сбор участников</h3></li>
-          <li><time datetime="10:30">10:30</time><h3>Начало хакатона</h3></li>
-          <li><span aria-hidden="true">/</span><h3>Бриф</h3></li>
-          <li><span aria-hidden="true">/</span><h3>Кодинг</h3></li>
-          <li><span aria-hidden="true">/</span><h3>Стопкод</h3></li>
-          <li><span aria-hidden="true">/</span><h3>Подготовка к защите</h3></li>
-          <li><span aria-hidden="true">/</span><h3>Защита</h3></li>
-          <li><span aria-hidden="true">/</span><h3>Награждение</h3></li>
+    <div class="line-decoration marquee" aria-hidden="true"><div class="marquee-track"><div class="marquee-group"><span>КОЛЛАБ x Т-БАНК x ВШЭ /</span><span>КОЛЛАБ x Т-БАНК x ВШЭ /</span><span>КОЛЛАБ x Т-БАНК x ВШЭ /</span></div><div class="marquee-group"><span>КОЛЛАБ x Т-БАНК x ВШЭ /</span><span>КОЛЛАБ x Т-БАНК x ВШЭ /</span><span>КОЛЛАБ x Т-БАНК x ВШЭ /</span></div></div></div>
+    <section class="section cases case-summary" id="cases" aria-labelledby="case-title"><h2 id="case-title">Кейс</h2><p class="task-description">В командах по 5 человек разработайте модель подбора персональных условий для клиентов банка. Решите, какие предложения заинтересуют пользователя и как совместить его интересы с задачами банка.</p></section>
+    <section class="section participants" id="participants">
+        <div class="section-heading" data-reveal>
+            
+            <h2>КТО <em>УЧАСТВУЕТ</em></h2></div>
+        <div class="participant-layout" data-reveal>
+            
+            <div class="participant-list"><div class="participant-item"><strong>Студенты бакалавриата</strong><p>1–4 курсов, очной и заочной форм обучения</p></div><div class="participant-item"><strong>10 команд по 5 человек</strong><p class="team-recommendation">Рекомендуем иметь в команде разработчика, ML-специалиста и аналитика данных.</p></div></div>
+            <div class="participant-pattern">
+                <svg class="bowl-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 500" fill="none"
+                     aria-hidden="true">
+                    <g class="bowl-rings" stroke="currentColor" stroke-linecap="round" stroke-width="10">
+                        <path d="M108 296c-3-90 58-160 149-160s152 73 152 160"/>
+                        <path d="M135 295c0-72 47-130 122-130s124 61 124 130"/>
+                        <path d="M165 296c-3-56 30-102 91-102s96 51 96 102"/>
+                        <path d="M193 297c-1-40 20-75 65-75s65 37 65 75"/>
+                        <path d="M221 296c0-25 11-45 36-45s38 20 39 45"/>
+                        <path d="M130 295c-2-47 37-92 87-91"/>
+                        <path d="M304 252c44-36 102-20 109 44"/>
+                        <path d="M332 276c26-14 48-5 54 20"/>
+                    </g>
+                    <g class="bowl-sticks" stroke="currentColor" stroke-linecap="round" stroke-width="12">
+                        <path d="m337 171 104-133"/>
+                        <path d="m361 192 111-117"/>
+                    </g>
+                    <g class="bowl-steam" stroke="currentColor" stroke-linecap="round" stroke-width="6">
+                        <path d="M168 143c-23-22 23-38 8-68"/>
+                        <path d="M233 125c-24-22 21-39 5-68"/>
+                        <path d="M291 144c-22-22 20-41 5-69"/>
+                    </g>
+                    <path class="bowl-body" d="M65 295h390c0 104-84 162-195 162S65 399 65 295Z" stroke="currentColor"
+                          stroke-width="13" stroke-linejoin="round"/>
+                    <path d="M64 295h392" stroke="currentColor" stroke-linecap="round" stroke-width="15"/>
+                    <path d="M183 454v20h153v-20M197 474h125" stroke="currentColor" stroke-linecap="round"
+                          stroke-width="11"/>
+                    <circle cx="241" cy="411" r="6.5" fill="currentColor"/>
+                    <circle cx="278" cy="411" r="6.5" fill="currentColor"/>
+                    <path d="M248 429c8 7 18 7 25 0" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+                </svg></div>
+        </div>
+    </section>
+    <section class="section schedule" id="schedule">
+        <div class="section-heading" data-reveal>
+            
+            <h2>ПРОГРАММА <em>ДНЯ</em></h2>
+            
+        </div>
+        <div class="schedule-intro" data-reveal>
+            <div><span class="schedule-time">9:30</span><strong>СБОР</strong></div>
+            <div><span class="schedule-time">10:30</span><strong>НАЧАЛО ХАКАТОНА</strong></div>
+        </div>
+        <ol class="timeline" data-reveal>
+            <li class="timeline-stage"><span
+                    class="time-marker"></span><strong>Бриф</strong></li>
+            <li class="timeline-stage"><span
+                    class="time-marker"></span><strong>Кодинг</strong>
+            </li>
+            <li class="timeline-stage"><span class="time-marker"></span><strong>Стопкод</strong></li>
+            <li class="timeline-stage"><span class="time-marker"></span><strong>Подготовка
+                к защите</strong></li>
+            <li class="timeline-stage"><span
+                    class="time-marker"></span><strong>Защита</strong>
+            </li>
+            <li class="timeline-stage"><span class="time-marker"></span><strong>Награждение</strong></li>
         </ol>
-      </div>
     </section>
-    <div id="registration" class="registration wrap">
-      <!-- REGISTRATION_URL: замените #registration на адрес сторонней регистрации. -->
-      <a class="button button-wide" href="#registration" data-registration aria-disabled="true">Зарегистрироваться <span aria-hidden="true">↗</span></a>
-    </div>
-    <section id="faq" class="section wrap faq" aria-labelledby="faq-title">
+    
+    <div class="section registration" id="registration"><!-- REGISTRATION_URL: замените #registration на ссылку регистрации. --><a class="arrow-cta registration-link" data-registration href="#registration" aria-disabled="true">ЗАРЕГИСТРИРОВАТЬСЯ <span><svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span></a></div>
+    <section id="faq" class="section faq clean-faq" aria-labelledby="faq-title">
       <h2 id="faq-title">Вопросы и ответы</h2>
       <div class="faq-list">
         <details><summary>Можно ли участвовать без опыта?</summary><p>Да. Хакатон открыт и для тех, кто только начинает изучать ML и разработку.</p></details>
@@ -75,12 +156,14 @@
         <details><summary>Будет ли питание?</summary><p>Питание не предусмотрено. Пожалуйста, спланируйте обед самостоятельно.</p></details>
       </div>
     </section>
-    <section id="partners" class="section wrap partners" aria-label="Организатор и партнёры">
+    <section id="partners" class="section partners clean-partners" aria-label="Организатор и партнёры">
       <article class="partner"><p class="partner-role">Организатор</p><div class="partner-logo"><img src="assets/collab-blue.svg" width="474" height="111" alt="Коллаб" loading="lazy"></div><h2>Коллаб</h2><p>Внеучебный клуб ВШЭ</p></article>
-      <article class="partner partner-bank"><p class="partner-role">Партнёр</p><div class="partner-logo"><img src="assets/tbank.png" width="600" height="600" alt="Т-Банк" loading="lazy"></div><h2>Т-Банк</h2><p>IT-хаб Т-Банка</p></article>
+      <article class="partner partner-bank"><p class="partner-role">Партнёр</p><div class="partner-logo"><img src="assets/tbank.svg" width="300" height="300" alt="Т-Банк" loading="lazy"></div><h2>Т-Банк</h2><p>IT-хаб Т-Банка</p></article>
       <article class="partner partner-hse"><p class="partner-role">Партнёр</p><div class="partner-logo"><img src="assets/hse.png" width="493" height="490" alt="НИУ ВШЭ" loading="lazy"></div><h2>НИУ ВШЭ</h2><p>Нижний Новгород</p></article>
     </section>
-  </main>
-  <footer class="footer"><div class="wrap footer-inner"><p><time datetime="2026-11-28">28.11.2026</time> <span>/</span> 9:30–20:00 <span>/</span> БЦ «Лобачевский Плаза» <span>/</span> IT-хаб Т-Банка <span>/</span> 3 этаж</p><a href="#top">Наверх ↑</a></div></footer>
-</body>
+    <footer class="footer"><div class="footer-bottom"><span>28.11.2026 / 9:30–20:00 / БЦ «Лобачевский Плаза» / IT-хаб Т-Банка / 3 этаж</span><a href="#top">НАВЕРХ <span><svg class="icon-arrow icon-up" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span></a></div></footer>
+</main>
+
+
+<script src="script.js" defer></script></body>
 </html>
