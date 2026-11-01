@@ -1,43 +1,86 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Коллаб × Т-Банк — хакатон 28 ноября</title>
-<meta name="description" content="Однодневный студенческий хакатон по машинному обучению и разработке. 28 ноября, Нижний Новгород, IT-хаб Т-Банка.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--blue:#1452a5;--light:#5d86be;--deep:#150578;--paper:#f6f6f6;--white:#fff;--ink:#1e1e1e;--black:#000;--line:currentColor;--s0:0;--s1:.5rem;--s2:1rem;--s3:1.5rem;--s4:2rem;--s5:3rem;--s6:5rem;--s7:7rem;--tiny:.75rem;--small:.875rem;--body:1rem;--lead:clamp(1.05rem,2vw,1.3rem);--h1:clamp(3.1rem,10.5vw,10rem);--h2:clamp(2rem,5vw,4.8rem);--h3:clamp(1.25rem,2.5vw,2rem);--number:clamp(4rem,9vw,8rem);--width:1320px;--gutter:clamp(1.25rem,4vw,4rem);--border:1px;--focus:3px;--track:-.065em;--duration:180ms;--partner-logo:112px;--stat-gap:.08em;--club-header:180px;--club-footer:260px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:var(--s4)}body{margin:var(--s0);background:var(--paper);color:var(--ink);font-family:Montserrat,Arial,sans-serif;font-size:var(--body);line-height:1.6}a{color:inherit;text-underline-offset:.25em}button,a,summary{-webkit-tap-highlight-color:transparent}a:focus-visible,summary:focus-visible{outline:var(--focus) solid currentColor;outline-offset:5px}::selection{background:var(--deep);color:var(--white)}h1,h2,h3,p{margin:var(--s0)}h1,h2,h3{line-height:1.08}h2{font-size:var(--h2);font-weight:600;letter-spacing:var(--track)}h3{font-size:var(--h3);font-weight:600;letter-spacing:-.035em}p+p{margin-top:var(--s2)}.wrap{max-width:var(--width);margin:auto;padding-inline:var(--gutter)}.skip{position:absolute;top:var(--s2);left:var(--s2);transform:translateY(-200%);background:var(--white);color:var(--blue);padding:var(--s2);z-index:5}.skip:focus{transform:none}.blue{background:var(--blue);color:var(--paper)}header .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);padding-block:var(--s3);border-bottom:var(--border) solid var(--light)}.wordmark{font-weight:800;font-size:var(--h3);letter-spacing:-.07em;text-decoration:none}.brand-pair{display:flex;gap:var(--s2);align-items:center}.brand-pair span{font-size:var(--small)}nav{display:flex;gap:var(--s3);font-size:var(--small)}nav a{text-decoration:none}nav a:hover{text-decoration:underline}.hero{padding-block:var(--s5) var(--s4)}.eyebrow{font-size:var(--tiny);font-weight:600;letter-spacing:.13em;text-transform:uppercase}.hero-meta{display:flex;justify-content:space-between;gap:var(--s2);flex-wrap:wrap;margin-bottom:var(--s5)}h1{font-size:var(--h1);font-weight:600;letter-spacing:var(--track);line-height:.95;position:relative;z-index:1}.hero-title{position:relative;padding-bottom:var(--s4)}.hero-title h1 span{display:block}.hero-title h1 small{font-size:.32em;letter-spacing:-.04em;display:block;margin-top:var(--s3)}.art{position:absolute;right:0;top:0;width:32%;aspect-ratio:1;display:grid;grid-template-columns:1fr 1fr;gap:var(--s2);opacity:1}.shape{background:var(--paper)}.shape:nth-child(1){border-radius:100% 0 0 0}.shape:nth-child(2){clip-path:polygon(0 0,100% 100%,0 100%)}.shape:nth-child(3){border-radius:50% 0 0 50%}.shape:nth-child(4){background:none;border:clamp(12px,2.8vw,40px) solid var(--paper);border-radius:50%;border-right-color:transparent;transform:rotate(-45deg)}.hero-bottom{display:grid;grid-template-columns:1fr;gap:var(--s4);margin-top:var(--s4);padding-top:var(--s4);border-top:var(--border) solid var(--light)}.hero-copy{font-size:var(--lead);max-width:42ch}.button{display:inline-flex;align-items:center;justify-content:space-between;gap:var(--s4);background:var(--paper);color:var(--blue);padding:var(--s3);font-size:var(--body);font-weight:600;text-decoration:none;min-height:56px;transition:background var(--duration),color var(--duration)}.button:hover{background:var(--deep);color:var(--white)}.button .arrow{font-size:var(--h3)}.cta-note{margin-top:var(--s1);font-size:var(--tiny)}.place{display:grid;gap:var(--s1);padding-block:var(--s4);font-size:var(--small)}.section{padding-block:var(--s6)}.section-head{display:grid;gap:var(--s3);margin-bottom:var(--s5)}.section-label{font-size:var(--tiny);text-transform:uppercase;letter-spacing:.1em;font-weight:600}.intro{font-size:var(--lead);max-width:53ch}.audience{display:grid;grid-template-columns:1fr;gap:var(--s4);margin-top:var(--s5)}.stat{border-top:var(--border) solid var(--blue);padding-top:var(--s2)}.stat strong{display:block;color:var(--blue);font-size:var(--number);font-weight:500;letter-spacing:var(--track);line-height:1.2}.stat p{max-width:27ch;font-size:var(--small)}.aside{margin-top:var(--s5);padding:var(--s3);border-left:4px solid var(--blue);max-width:65ch}.dark{background:var(--ink);color:var(--paper)}.schedule{list-style:none;padding:var(--s0);margin:var(--s0)}.schedule li{display:grid;grid-template-columns:70px 1fr;gap:var(--s3);border-top:var(--border) solid var(--light);padding-block:var(--s3)}.schedule .time{font-size:var(--small);padding-top:.25rem}.schedule h3{margin-bottom:var(--s1)}.schedule p{font-size:var(--small);max-width:56ch}.end-note{margin-top:var(--s4);font-size:var(--small)}.prize{display:grid;gap:var(--s4);padding-block:var(--s5);border-bottom:var(--border) solid var(--blue);color:var(--blue)}.prize p{max-width:42ch}.faq details{border-top:var(--border) solid var(--blue)}.faq details:last-child{border-bottom:var(--border) solid var(--blue)}summary{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);cursor:pointer;list-style:none;padding-block:var(--s3);font-weight:600;font-size:var(--lead)}summary::-webkit-details-marker{display:none}summary::after{content:'+';font-size:var(--h3);font-weight:400}details[open] summary::after{content:'−'}.answer{padding-bottom:var(--s3);max-width:70ch;font-size:var(--body)}.register{display:grid;gap:var(--s4)}.register h2{max-width:14ch}.register p{max-width:51ch}.registration-note{border-top:var(--border) solid var(--light);padding-top:var(--s3);font-size:var(--small)}footer{padding-block:var(--s5) var(--s3)}.partners{display:flex;flex-wrap:wrap;gap:var(--s4);align-items:center;margin-block:var(--s4) var(--s5)}.partner{font-size:var(--h3);font-weight:700;line-height:1.2}.partner small{display:block;font-size:var(--tiny);font-weight:500;margin-top:var(--s1)}.footline{border-top:var(--border) solid var(--ink);padding-top:var(--s3);display:flex;justify-content:space-between;gap:var(--s3);flex-wrap:wrap;font-size:var(--small)}
-@media(min-width:700px){.hero-title{display:grid;grid-template-columns:minmax(0,1.85fr) minmax(0,1fr);align-items:center;gap:var(--s4)}.hero-title h1{grid-column:1;grid-row:1;font-size:clamp(3.1rem,9vw,8rem);min-width:0}.hero-title .art{position:relative;grid-column:2;grid-row:1;width:100%;pointer-events:none}.hero-title .shape{min-width:0;min-height:0}.hero-bottom{grid-template-columns:1.3fr 1fr;align-items:start}.place{grid-template-columns:1fr 1fr}.audience{grid-template-columns:repeat(3,1fr)}.section-head{grid-template-columns:1fr 3fr}.section-head .intro{grid-column:2}.schedule{margin-left:25%}.schedule li{grid-template-columns:100px 1fr}.prize{grid-template-columns:1fr 1fr;align-items:center}.register{grid-template-columns:1.2fr 1fr}.registration-note{grid-column:1/-1}}
-@media(max-width:699px){nav{display:none}.hero-title{padding-top:var(--s6)}.art{width:76px;top:0;gap:var(--s1)}.hero-meta{margin-bottom:var(--s3)}.shape:nth-child(4){border-width:10px}.hero-title h1 small{font-size:.38em}.button{width:100%}.section{padding-block:var(--s5)}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-.partner-logo{display:block;width:var(--partner-logo);height:var(--partner-logo);object-fit:contain;margin-bottom:var(--s2)}.partners{align-items:flex-start}.partner{flex:1;min-width:180px}
-.stat strong.stat-value{display:flex;align-items:baseline;gap:var(--stat-gap);letter-spacing:normal;font-size:clamp(3.5rem,7.5vw,6.5rem);font-variant-numeric:lining-nums}.club-header{display:block;width:var(--club-header);max-width:100%;height:auto}.club-footer{display:block;width:var(--club-footer);max-width:100%;height:auto;margin-bottom:var(--s2)}.wordmark{display:block;flex-shrink:1}.brand-pair{min-width:0}.brand-pair>span{flex-shrink:0}
-.partners {align-items: flex-start;}
-.partner > img {display: block; height: var(--partner-logo); object-fit: contain; object-position: left center; margin-bottom: var(--s2);}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1452A5">
+  <meta name="description" content="Хакатон Коллаб: ML и разработка для студентов. 28 ноября 2026, 9:30–20:00, IT-хаб Т-Банка в Нижнем Новгороде.">
+  <title>Хакатон Коллаб — 28 ноября 2026</title>
+  <link rel="icon" href="assets/collab-blue.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
-<a class="skip" href="#main">Перейти к содержимому</a>
-<header class="blue"><div class="wrap"><div class="brand-pair"><!-- LOGO_COLLAB: замените текст на img с width и height, сохранив охранное поле. --><a class="wordmark" href="#" aria-label="Коллаб — начало страницы"><img class="club-header" src="assets/collab-header.png" alt="Коллаб" width="868" height="316"></a><span>×</span><span>Т-Банк</span></div><nav aria-label="Основная навигация"><a href="#about">Для кого</a><a href="#schedule">Программа</a><a href="#faq">Вопросы</a></nav></div></header>
-<main id="main">
-<section class="blue" aria-labelledby="hero-heading"><div class="wrap hero"><div class="hero-meta"><p class="eyebrow">Нижний Новгород / ML + разработка</p><p class="eyebrow">28 ноября · 10:00</p></div><div class="hero-title"><div class="art" aria-hidden="true"><i class="shape"></i><i class="shape"></i><i class="shape"></i><i class="shape"></i></div><h1 id="hero-heading">Хакатон<small>Коллаб × Т-Банк</small></h1></div><div class="hero-bottom"><p class="hero-copy">От данных — к продукту.<br>Один день, команда и задача, которую предстоит решить с помощью машинного обучения.</p><div><!-- REGISTRATION_URL: замените #registration на адрес внешнего сервиса. --><a class="button" href="#registration">Регистрация открыта <span class="arrow" aria-hidden="true">↗</span></a><p class="cta-note">10 команд · по 5 участников</p></div></div><div class="place"><p>28 ноября / сбор в 10:00<br>Всё мероприятие — за один день</p><p>Бизнес-центр «Лобачевский Плаза»<br>3 этаж · IT-хаб Т-Банка</p></div></div></section>
-<section id="about" class="section wrap" aria-labelledby="about-title"><div class="section-head"><p class="section-label">01 / Участники</p><h2 id="about-title">Соберитесь.<br>Сделайте. Покажите.</h2><p class="intro">Разработайте продукт, который умеет предсказывать. Соедините ML-модель с работающим решением и представьте результат на защите.</p></div><div class="audience"><div class="stat"><strong class="stat-value" aria-label="С первого по четвёртый"><span>1</span><span>–</span><span>4</span></strong><h3>курс бакалавриата</h3><p>Ждём студентов очной и заочной формы обучения.</p></div><div class="stat"><strong class="stat-value" aria-label="До 23 включительно"><span>≤</span><span>23</span></strong><h3>года включительно</h3><p>Участие открыто студентам до 23 лет включительно.</p></div><div class="stat"><strong class="stat-value" aria-label="10 команд по 5 человек"><span>10</span><span>×</span><span>5</span></strong><h3>команд и участников</h3><p>Десять команд по пять человек. Можно прийти без команды.</p></div></div><p class="aside">Первый хакатон? Можно без опыта. Если команды ещё нет, найдите участников в чате — ссылка появится после регистрации.</p></section>
-<section id="schedule" class="section dark" aria-labelledby="schedule-title"><div class="wrap"><div class="section-head"><p class="section-label">02 / Программа</p><h2 id="schedule-title">Один день.<br>Полный цикл.</h2></div><ol class="schedule"><li><span class="time">10:00</span><div><h3>Сбор участников</h3><p>Знакомимся с площадкой и готовимся к старту.</p></div></li><li><span class="time">10:30</span><div><h3>Начало хакатона</h3><p>Открытие и организационные детали.</p></div></li><li><span class="time">01 /</span><div><h3>Бриф</h3><p>Разбираем задачу и требования к результату.</p></div></li><li><span class="time">02 /</span><div><h3>Кодинг</h3><p>Исследуем данные, обучаем модель, собираем продукт.</p></div></li><li><span class="time">03 /</span><div><h3>Стопкод</h3><p>Завершаем разработку и фиксируем результат.</p></div></li><li><span class="time">04 /</span><div><h3>Подготовка к защите</h3><p>Собираем презентацию и готовим демонстрацию.</p></div></li><li><span class="time">05 /</span><div><h3>Защита</h3><p>Показываем продукт и рассказываем о решении.</p></div></li><li><span class="time">06 /</span><div><h3>Награждение</h3><p>Подводим итоги и поздравляем победителей.</p></div></li></ol><p class="end-note">Планируем завершить в 19:00–20:00. Время этапов после открытия уточняется.</p></div></section>
-<div class="wrap"><section class="prize" aria-labelledby="prize-title"><div><p class="section-label">За идеи и результат</p><h2 id="prize-title">Призы —<br>мерч Т-Банка.</h2></div><p>Победителям — крутой мерч. Всем участникам — возможность пройти путь от задачи до продукта за один день.</p></section></div>
-<section id="faq" class="section wrap faq" aria-labelledby="faq-title"><div class="section-head"><p class="section-label">03 / Перед стартом</p><h2 id="faq-title">Есть вопросы.</h2></div>
-<details><summary>Можно участвовать без опыта?</summary><div class="answer">Да. Предыдущий опыт участия в хакатонах не требуется. Приходите, если хотите попробовать свои силы в ML и разработке.</div></details>
-<details><summary>А если у меня нет команды?</summary><div class="answer">Можно зарегистрироваться без команды. Найти участников можно в чате мероприятия — ссылка будет доступна после регистрации.</div></details>
-<details><summary>Можно ли школьникам?</summary><div class="answer">Нет, этот хакатон — для студентов 1–4-го курса бакалавриата очной и заочной формы обучения, в возрасте до 23 лет включительно.</div></details>
-<details><summary>Когда и где встречаемся?</summary><div class="answer">28 ноября, сбор в 10:00, начало в 10:30. Нижний Новгород, бизнес-центр «Лобачевский Плаза», 3 этаж, IT-хаб Т-Банка. Хакатон проходит за один день; ориентировочное завершение — в 19:00–20:00.</div></details>
-<details><summary>Как узнать, что регистрация подтверждена?</summary><div class="answer">Подтверждение придёт на электронную почту, указанную при регистрации. Проверьте правильность адреса и папку «Спам».</div></details>
-<details><summary>Что будет в призовом фонде?</summary><div class="answer">Мерч Т-Банка. Подробности о призах сообщим дополнительно.</div></details>
-<details><summary>Что взять с собой?</summary><div class="answer">Рекомендуем взять ноутбук, зарядное устройство и документ, удостоверяющий личность. Мышь и наушники — по желанию. Требования для прохода на площадку уточним перед мероприятием.</div></details>
-<details><summary>Нужно заранее устанавливать программы?</summary><div class="answer">Не обязательно. Для удобного старта рекомендуем подготовить редактор кода, Git и среду Python с Jupyter. Окончательный набор инструментов зависит от вашего решения.</div></details>
-<details><summary>Будет ли питание?</summary><div class="answer">Питание не предусмотрено. Пожалуйста, заранее продумайте обед и перекус.</div></details>
-</section>
-<section id="registration" class="section blue" aria-labelledby="registration-title"><div class="wrap register"><div><p class="eyebrow">28 ноября / Нижний Новгород</p><h2 id="registration-title">Встретимся<br>на старте.</h2></div><div><p class="intro">Пять человек. Одна команда.<br>Ваш следующий продукт.</p><p>Зарегистрируйтесь через внешний сервис. Подтверждение участия придёт письмом, а после регистрации будет доступна ссылка на чат.</p></div><!-- Удалите это примечание после добавления REGISTRATION_URL выше. --><p class="registration-note">Ссылка на форму регистрации скоро появится на этой странице.</p></div></section>
-</main>
-<footer class="wrap"><p class="section-label">Организатор и партнёры</p><div class="partners"><!-- LOGOS: изображения партнёров находятся в assets. Для замены обновите файл и его width/height. Пустой alt исключает повтор названия рядом. --><div class="partner"><img class="club-footer" src="assets/collab-footer.png" alt="" width="839" height="318" loading="lazy">Коллаб<small>Внеучебный клуб ВШЭ · организатор</small>
-</div><div class="partner"><img class="partner-logo" src="assets/tbank.jpg" alt="" width="1440" height="1440" loading="lazy">Т-Банк<small>Партнёр хакатона</small></div><div class="partner"><img class="partner-logo" src="assets/hse.png" alt="" width="493" height="490" loading="lazy">НИУ ВШЭ<small>Нижний Новгород · партнёр</small></div></div><div class="footline"><!-- CONTACTS: добавьте email и/или ссылку на Telegram организаторов. --><p>Контакты организаторов появятся здесь.</p><a href="#main">К началу ↑</a></div></footer>
-</body></html>
+<body id="top">
+  <a class="skip" href="#main">К содержимому</a>
+  <header class="header wrap">
+    <a class="brand" href="#top" aria-label="Коллаб — на главную"><img src="assets/collab-blue.svg" width="474" height="111" alt="Коллаб"></a>
+    <nav aria-label="Основная навигация"><a href="#participants">Участники</a><a href="#schedule">Программа</a><a href="#faq">Вопросы</a><a href="#partners">Партнёры</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <h1 id="hero-title">ХАКАТОН<span>КОЛЛАБ</span></h1>
+      <div class="hero-bottom"><p>ML + разработка.<br>Один день, чтобы создать продукт.</p><a class="button" href="#registration">Регистрация открыта <span aria-hidden="true">↗</span></a></div>
+      <dl class="event-info">
+        <div><dt>Дата</dt><dd><time datetime="2026-11-28">28.11.2026</time></dd></div>
+        <div><dt>Сбор</dt><dd><time datetime="2026-11-28T09:30:00+03:00">9:30</time></dd></div>
+        <div><dt>Место / Нижний Новгород</dt><dd>БЦ «Лобачевский Плаза»<span>IT-хаб Т-Банка / 3 этаж</span></dd></div>
+      </dl>
+    </section>
+    <div class="marquee" aria-label="Коллаб / Хакатон">
+      <div class="marquee-track" aria-hidden="true">
+        <div class="marquee-group"><span>КОЛЛАБ <b>»</b> ХАКАТОН <b>/</b></span><span>КОЛЛАБ <b>»</b> ХАКАТОН <b>/</b></span></div>
+        <div class="marquee-group"><span>КОЛЛАБ <b>»</b> ХАКАТОН <b>/</b></span><span>КОЛЛАБ <b>»</b> ХАКАТОН <b>/</b></span></div>
+      </div>
+      <button class="motion-toggle" type="button" aria-label="Приостановить бегущую строку" aria-pressed="false" hidden><span aria-hidden="true">Ⅱ</span></button>
+    </div>
+    <section id="participants" class="section wrap" aria-labelledby="participants-title">
+      <h2 id="participants-title">Кто участвует</h2>
+      <div class="participants-grid">
+        <article><h3>Студенты бакалавриата</h3><p>1–4 курсов, очной и заочной форм обучения.</p></article>
+        <article><h3>10 команд</h3><p>По 5 человек. Можно прийти без команды — найти её поможет чат участников.</p></article>
+      </div>
+    </section>
+    <section id="schedule" class="schedule" aria-labelledby="schedule-title">
+      <div class="section wrap schedule-grid">
+        <div><h2 id="schedule-title">Программа<br>дня</h2><p class="schedule-note">От первой идеи<br>до защиты продукта.</p></div>
+        <ol class="timeline">
+          <li><time datetime="09:30">9:30</time><h3>Сбор участников</h3></li>
+          <li><time datetime="10:30">10:30</time><h3>Начало хакатона</h3></li>
+          <li><span aria-hidden="true">/</span><h3>Бриф</h3></li>
+          <li><span aria-hidden="true">/</span><h3>Кодинг</h3></li>
+          <li><span aria-hidden="true">/</span><h3>Стопкод</h3></li>
+          <li><span aria-hidden="true">/</span><h3>Подготовка к защите</h3></li>
+          <li><span aria-hidden="true">/</span><h3>Защита</h3></li>
+          <li><span aria-hidden="true">/</span><h3>Награждение</h3></li>
+        </ol>
+      </div>
+    </section>
+    <div id="registration" class="registration wrap">
+      <!-- REGISTRATION_URL: замените #registration на адрес сторонней регистрации. -->
+      <a class="button button-wide" href="#registration" data-registration aria-disabled="true">Зарегистрироваться <span aria-hidden="true">↗</span></a>
+    </div>
+    <section id="faq" class="section wrap faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Вопросы и ответы</h2>
+      <div class="faq-list">
+        <details><summary>Можно ли участвовать без опыта?</summary><p>Да. Хакатон открыт и для тех, кто только начинает изучать ML и разработку.</p></details>
+        <details><summary>Можно ли участвовать без команды?</summary><p>Да. Найти команду можно в чате участников — ссылка на него будет доступна после регистрации.</p></details>
+        <details><summary>Можно ли участвовать школьникам?</summary><p>Нет. Хакатон рассчитан на студентов бакалавриата 1–4 курсов.</p></details>
+        <details><summary>Когда проходит хакатон?</summary><p>28 ноября 2026 года, с 9:30 до 20:00. Сбор в 9:30, начало хакатона в 10:30. Всё мероприятие проходит за один день.</p></details>
+        <details><summary>Как узнать, что регистрация подтверждена?</summary><p>Подтверждение придёт письмом на почту, указанную при регистрации. Проверьте также папку «Спам».</p></details>
+        <details><summary>Что взять с собой?</summary><p>Ноутбук и зарядное устройство. Мышь, наушники и другие привычные аксессуары — по желанию.</p></details>
+        <details><summary>Нужно ли заранее установить программы?</summary><p>Не обязательно, но рекомендуем заранее подготовить привычную среду разработки, Python и Git, чтобы не тратить время на настройку в день хакатона.</p></details>
+        <details><summary>Будет ли питание?</summary><p>Питание не предусмотрено. Пожалуйста, спланируйте обед самостоятельно.</p></details>
+      </div>
+    </section>
+    <section id="partners" class="section wrap partners" aria-label="Организатор и партнёры">
+      <article class="partner"><p class="partner-role">Организатор</p><div class="partner-logo"><img src="assets/collab-blue.svg" width="474" height="111" alt="Коллаб" loading="lazy"></div><h2>Коллаб</h2><p>Внеучебный клуб ВШЭ</p></article>
+      <article class="partner partner-bank"><p class="partner-role">Партнёр</p><div class="partner-logo"><img src="assets/tbank.png" width="600" height="600" alt="Т-Банк" loading="lazy"></div><h2>Т-Банк</h2><p>IT-хаб Т-Банка</p></article>
+      <article class="partner partner-hse"><p class="partner-role">Партнёр</p><div class="partner-logo"><img src="assets/hse.png" width="493" height="490" alt="НИУ ВШЭ" loading="lazy"></div><h2>НИУ ВШЭ</h2><p>Нижний Новгород</p></article>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><p><time datetime="2026-11-28">28.11.2026</time> <span>/</span> 9:30–20:00 <span>/</span> БЦ «Лобачевский Плаза» <span>/</span> IT-хаб Т-Банка <span>/</span> 3 этаж</p><a href="#top">Наверх ↑</a></div></footer>
+</body>
+</html>
