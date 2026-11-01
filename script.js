@@ -1,23 +1,14 @@
-'use strict';
-// При замене href в index.html ссылка заработает без изменений JavaScript.
-const registrationLink = document.querySelector('[data-registration]');
-if (registrationLink) {
-  const missing = registrationLink.getAttribute('href') === '#registration';
-  if (missing) {
-    registrationLink.addEventListener('click', event => event.preventDefault());
-  } else {
-    registrationLink.removeAttribute('aria-disabled');
-  }
+"use strict";
+const menu=document.querySelector('.menu-toggle');
+const nav=document.querySelector('#primary-nav');
+if(menu && nav){
+ const close=()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Открыть меню');};
+ menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');});
+ nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'){close();menu.focus();}});
 }
-// Две одинаковые группы дают бесшовный цикл; пауза доступна с клавиатуры.
-const marquee = document.querySelector('.marquee');
-const pause = document.querySelector('.motion-toggle');
-if (marquee && pause) {
-  pause.hidden = false;
-  pause.addEventListener('click', () => {
-    const paused = marquee.classList.toggle('is-paused');
-    pause.setAttribute('aria-pressed', String(paused));
-    pause.setAttribute('aria-label', paused ? 'Продолжить бегущую строку' : 'Приостановить бегущую строку');
-    pause.firstElementChild.textContent = paused ? '▷' : 'Ⅱ';
-  });
-}
+const link=document.querySelector('[data-registration]');
+if(link?.getAttribute('href')==='#registration')link.addEventListener('click',e=>e.preventDefault());else link?.removeAttribute('aria-disabled');
+const progress=document.querySelector('.progress');
+function update(){const max=document.documentElement.scrollHeight-innerHeight;if(progress)progress.style.width=(max>0?scrollY/max*100:0)+'%';}
+addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();
