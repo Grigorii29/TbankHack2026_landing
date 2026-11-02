@@ -260,3 +260,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline:3px solid v
   .hero-editorial-bottom > .arrow-cta:hover { transform:none; box-shadow:none; }
   .hero-editorial-bottom > .arrow-cta > span { flex-shrink:0; }
 }
+@media (max-width: 760px) {
+  .editorial-message {
+    padding-bottom: 24px;
+  }
+}
