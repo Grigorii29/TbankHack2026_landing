@@ -409,3 +409,40 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline:3px solid v
   outline: 2px solid var(--paper);
   outline-offset: 6px;
 }
+
+.schedule .day-timeline .schedule-time {
+  display: block;
+  margin-bottom: 8px;
+  font: 500 18px/1.4 var(--mono);
+  letter-spacing: normal;
+}
+
+.schedule .day-timeline .timeline-stage-key .schedule-time {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer .footer-telegram + .footer-telegram {
+  margin-left: 40px;
+}
+
+@media (max-width: 760px) {
+  .footer .footer-telegram {
+    display: flex;
+  }
+
+  .footer .footer-telegram + .footer-telegram {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+.clean-faq .faq-chat-link {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.clean-faq .faq-chat-link:hover {
+  color: var(--deep);
+}
